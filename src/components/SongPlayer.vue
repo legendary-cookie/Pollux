@@ -1,6 +1,16 @@
 <template>
     <audio v-bind:src="song.songSrc" preload="auto" autoplay ref="audioPlayer" />
-
+<div style="
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 500px;
+    height: 400px;
+    margin: auto;"
+>
 <div class="bg-white dark:bg-gray-800 rounded-tl-xl sm:rounded-t-xl p-4 pb-6 sm:p-8 lg:p-4 lg:pb-6 xl:p-8 space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8">
   <div class="flex items-center space-x-3.5 sm:space-x-5 lg:space-x-3.5 xl:space-x-5">
     <img v-bind:src="song.src" alt="" width="160" height="160" class="flex-none w-20 h-20 rounded-lg bg-gray-100" />
@@ -67,7 +77,7 @@
     1.0x
   </button>
 </div>
-
+</div>
 </template>
 
 <script>
