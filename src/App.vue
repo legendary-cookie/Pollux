@@ -17,13 +17,13 @@ export default {
 
 <style>
 .app-container {
-  width: 350px;
-  height: 700px;
+  /* Fill out screen */
+   min-height: 100vh;
 }
+/* Standard #app stuff */
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-top: 20px;
 }
 </style>
