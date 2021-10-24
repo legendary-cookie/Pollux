@@ -1,9 +1,9 @@
 <template>
-  <div v-if="!isPlayerVisible">
+  <div>
     <button v-on:click="refresh">
       <p class="text-gray-400">Refresh</p>
     </button>
-    <div class="text-yellow-300 font-bold text-center text-3xl mb-7 mt-3">
+    <div class="text-yellow-400 font-bold text-center text-3xl mb-7 mt-3">
       Music Player
     </div>
     <div

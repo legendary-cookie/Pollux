@@ -13,15 +13,14 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: 50%;
     right: 0;
     width: 500px;
     height: 400px;
     margin: auto;"
-    class="dark"
   >
     <div
-      class="bg-white dark:bg-gray-800 rounded-tl-xl sm:rounded-t-xl p-4 pb-6 sm:p-8 lg:p-4 lg:pb-6 xl:p-8 space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8"
+      class="bg-white dark:bg-gray-800 rounded-tl-xl sm:rounded-t-xl p-4 pb-6 sm:p-8 lg:p-4 lg:pb-6 xl:p-8 space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8 shadow"
     >
       <div
         class="flex items-center space-x-3.5 sm:space-x-5 lg:space-x-3.5 xl:space-x-5"
@@ -205,7 +204,10 @@ export default {
         .toISOString()
         .substr(14, 5);
 
-      this.$refs.progressbar.style.width = (this.$refs.audioPlayer.currentTime / this.$refs.audioPlayer.duration * 100)+"%";
+      this.$refs.progressbar.style.width =
+        (this.$refs.audioPlayer.currentTime / this.$refs.audioPlayer.duration) *
+          100 +
+        "%";
     },
     onEnded() {
       this.next();

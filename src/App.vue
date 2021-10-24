@@ -1,6 +1,8 @@
 <template>
-  <div class="app-container p-3 bg-black m-auto">
-    <SongList v-bind:list="list"/>
+  <div class="dark">
+    <div class="app-container p-3 dark:bg-gray-700 m-auto">
+      <SongList v-bind:list="list" />
+    </div>
   </div>
 </template>
 
@@ -15,7 +17,7 @@ export default {
   data() {
     return {
       list: []
-    }
+    };
   },
   mounted() {
     setInterval(this.refresh(), 500 * 1000);
@@ -37,7 +39,7 @@ export default {
 }
 /* Standard #app sstuff */
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
