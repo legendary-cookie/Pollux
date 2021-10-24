@@ -53,12 +53,12 @@
       </div>
       <div class="space-y-2">
         <div class="bg-gray-200 dark:bg-black rounded-full overflow-hidden">
-          <div class="relative pt-1">
-            <div class="overflow-hidden h-2 text-xs flex rounded bg-purple-200">
+          <div class="">
+            <div class="overflow-hidden h-2 text-xs flex rounded bg-gray-100">
               <div
                 ref="progressbar"
-                style="width:30%"
-                class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-500"
+                style="width:0%"
+                class="bg-green-500"
               ></div>
             </div>
           </div>
