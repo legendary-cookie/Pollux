@@ -9,19 +9,17 @@
     <div
       v-for="(song, songIndex) in list"
       v-bind:key="song.id"
-      class="flex flex-row justify-between mb-4 cursor-pointer"
+      class="flex flex-row justify-start mb-4 cursor-pointer"
       v-on:click="playSong(songIndex)"
     >
-      <div>
+      <img class="max-h-12 rounded" v-bind:src="song.image" />
+      <div class="pl-2">
         <span class="text-yellow-300">{{ song.name }}</span>
         <br />
         <span class="text-gray-200 text-xs">
           {{ song.artist }} -
           <span class="text-gray-400"> {{ song.album }} ({{ song.year }})</span>
         </span>
-      </div>
-      <div>
-        <img class="max-h-12 rounded" v-bind:src="song.image" />
       </div>
     </div>
   </div>

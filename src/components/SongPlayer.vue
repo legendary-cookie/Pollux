@@ -5,6 +5,7 @@
     autoplay
     ref="audioPlayer"
     @timeupdate="onTimeUpdateListener"
+    @ended="onEnded"
   />
   <div
     style="
@@ -52,13 +53,15 @@
       </div>
       <div class="space-y-2">
         <div class="bg-gray-200 dark:bg-black rounded-full overflow-hidden">
-          <div
-            class="bg-lime-500 dark:bg-lime-400 w-1/2 h-1.5"
-            role="progressbar"
-            aria-valuenow="1456"
-            aria-valuemin="0"
-            aria-valuemax="4550"
-          ></div>
+          <div class="relative pt-1">
+            <div class="overflow-hidden h-2 text-xs flex rounded bg-purple-200">
+              <div
+                ref="progressbar"
+                style="width:30%"
+                class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-500"
+              ></div>
+            </div>
+          </div>
         </div>
         <div
           class="text-gray-500 dark:text-gray-400 flex justify-between text-sm font-medium tabular-nums"
@@ -201,9 +204,11 @@ export default {
       this.fullTime = new Date(this.$refs.audioPlayer.duration * 1000)
         .toISOString()
         .substr(14, 5);
+
+      this.$refs.progressbar.style.width = (this.$refs.audioPlayer.currentTime / this.$refs.audioPlayer.duration * 100)+"%";
     },
-    onloadedmetadata() {
-      this.fullTime = this.$refs.audioPlayer.duration;
+    onEnded() {
+      this.next();
     },
     goback() {
       this.$emit("goback");
