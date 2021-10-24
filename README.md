@@ -1,4 +1,4 @@
-# musicplayer
+<p><img src="polluxlogo.png"></p>
 
 ## Project setup
 ```
