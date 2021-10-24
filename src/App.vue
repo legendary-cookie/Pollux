@@ -1,6 +1,6 @@
 <template>
   <div class="app-container p-3 bg-black m-auto">
-    <SongList />
+    <SongList v-bind:list="list"/>
   </div>
 </template>
 
@@ -11,6 +11,21 @@ export default {
   name: "App",
   components: {
     SongList
+  },
+  data() {
+    return {
+      list: []
+    }
+  },
+  mounted() {
+    setInterval(this.refresh(), 500 * 1000);
+  },
+  methods: {
+    refresh() {
+      fetch("http://localhost:3000/songs?amount=50")
+        .then(response => response.json())
+        .then(data => (this.list = data));
+    }
   }
 };
 </script>

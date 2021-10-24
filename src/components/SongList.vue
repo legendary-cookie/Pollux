@@ -41,19 +41,15 @@ export default {
   data() {
     return {
       isPlayerVisible: false,
-      currentSongIndex: 0,
-      list: []
+      currentSongIndex: 0
     };
   },
-  mounted() {
-    this.refresh();
+  props: {
+    list: {
+      type: Array
+    }
   },
   methods: {
-    refresh() {
-      fetch("http://localhost:3000/songs?amount=50")
-        .then(response => response.json())
-        .then(data => (this.list = data));
-    },
     playSong(index) {
       this.currentSongIndex = index;
       this.isPlayerVisible = true;
