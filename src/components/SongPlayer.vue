@@ -17,6 +17,7 @@
     width: 500px;
     height: 400px;
     margin: auto;"
+    class="dark"
   >
     <div
       class="bg-white dark:bg-gray-800 rounded-tl-xl sm:rounded-t-xl p-4 pb-6 sm:p-8 lg:p-4 lg:pb-6 xl:p-8 space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8"
@@ -116,7 +117,7 @@
             stroke-width="1.5"
           />
           <svg
-            v-if="isPlaying"
+            v-if="!isPlaying"
             xmlns="http://www.w3.org/2000/svg"
             height="50"
             width="50"
@@ -196,7 +197,7 @@ export default {
       this.currentTime = new Date(this.$refs.audioPlayer.currentTime * 1000)
         .toISOString()
         .substr(14, 5);
-        
+
       this.fullTime = new Date(this.$refs.audioPlayer.duration * 1000)
         .toISOString()
         .substr(14, 5);
