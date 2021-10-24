@@ -1,26 +1,26 @@
 <template>
-<div class="app-container p-3 bg-black m-auto">
+  <div class="app-container p-3 bg-black m-auto">
     <SongList />
   </div>
 </template>
 
 <script>
-import SongList from './components/SongList.vue';
+import SongList from "./components/SongList.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-	SongList
+    SongList
   }
-}
+};
 </script>
 
 <style>
 .app-container {
   /* Fill out screen */
-   min-height: 100vh;
+  min-height: 100vh;
 }
-/* Standard #app stuff */
+/* Standard #app sstuff */
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
