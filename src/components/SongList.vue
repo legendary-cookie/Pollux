@@ -12,14 +12,14 @@
                 <span class="text-yellow-300">{{ song.name }}</span>
                 <br />
                 <span class="text-gray-200 text-xs">
-                    {{ song.artistName }} - 
-                    <span class="text-gray-400"> {{ song.albumName }} ({{ song.year }})</span>
+                    {{ song.artist }} - 
+                    <span class="text-gray-400"> {{ song.album }} ({{ song.year }})</span>
                 </span>
             </div>
             <div>
                 <img
                     class="max-h-12 rounded"
-                    v-bind:src="song.src"
+                    v-bind:src="song.image"
                 />
             </div>
         </div>
@@ -45,29 +45,11 @@ export default {
                 {
                     id: 1,
                     name: 'Cheap Thrills',
-                    artistName: 'Adam Lambert',
-                    albumName: 'Everything',
+                    artist: 'Adam Lambert',
+                    album: 'Everything',
                     year: 2021,
-                    src: `https://source.unsplash.com/random/400x400?date=1`,
-                    songSrc: `https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3`
-                },
-                {
-                    id: 2,
-                    name: 'Lean on',
-                    artistName: 'Adam Levine',
-                    albumName: 'Goind Down',
-                    year: 2001,
-                    src: `https://source.unsplash.com/random/400x400?date=2`,
-                    songSrc: `https://filesamples.com/samples/audio/mp3/sample3.mp3`
-                },
-                {
-                    id: 3,
-                    name: 'Counting Stars',
-                    artistName: 'Adam Hart',
-                    albumName: 'Spice It Up',
-                    year: 2013,
-                    src: `https://source.unsplash.com/random/400x400?date=3`,
-                    songSrc: `https://filesamples.com/samples/audio/mp3/sample1.mp3`
+                    image: `https://source.unsplash.com/random/400x400?date=1`,
+                    audiosource: `https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3`
                 }
             ]
         }
