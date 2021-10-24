@@ -57,7 +57,8 @@
   <button type="button" v-on:click="togglePlay" class="mx-auto">
     <svg width="50" height="50" fill="none">
       <circle class="text-gray-300 dark:text-gray-500" cx="25" cy="25" r="24" stroke="currentColor" stroke-width="1.5" />
-      <path d="M18 16h4v18h-4V16zM28 16h4v18h-4z" fill="currentColor" />
+      <svg v-if="isPlaying" xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 1200 1200"><path d="M600 1200C268.65 1200 0 931.35 0 600S268.65 0 600 0s600 268.65 600 600-268.65 600-600 600zM450 300.45v599.1L900 600 450 300.45z" fill="currentColor"/></svg>
+      <path v-else d="M18 16h4v18h-4V16zM28 16h4v18h-4z" fill="currentColor" />
     </svg>
   </button>
   <button type="button" v-on:click="forward" class="mx-auto">

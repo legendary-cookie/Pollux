@@ -41,18 +41,13 @@ export default {
         return {
             isPlayerVisible: false,
             currentSongIndex: 0,
-            list: [
-                {
-                    id: 1,
-                    name: 'Cheap Thrills',
-                    artist: 'Adam Lambert',
-                    album: 'Everything',
-                    year: 2021,
-                    image: `https://source.unsplash.com/random/400x400?date=1`,
-                    audiosource: `https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3`
-                }
-            ]
+            list: []
         }
+    },
+    mounted () {
+	fetch('http://localhost:3000/songs')
+	.then(response => response.json())
+	.then(data => (this.list = data));
     },
     methods: {
         playSong (index) {
