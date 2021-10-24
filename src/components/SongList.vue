@@ -1,5 +1,8 @@
 <template>
   <div v-if="!isPlayerVisible">
+    <button v-on:click="refresh">
+      <p class="text-gray-400">Refresh</p>
+    </button>
     <div class="text-yellow-300 font-bold text-center text-3xl mb-7 mt-3">
       Music Player
     </div>
@@ -43,11 +46,14 @@ export default {
     };
   },
   mounted() {
-    fetch("http://localhost:3000/songs")
-      .then(response => response.json())
-      .then(data => (this.list = data));
+    this.refresh();
   },
   methods: {
+    refresh() {
+      fetch("http://localhost:3000/songs?amount=50")
+        .then(response => response.json())
+        .then(data => (this.list = data));
+    },
     playSong(index) {
       this.currentSongIndex = index;
       this.isPlayerVisible = true;
