@@ -1,4 +1,4 @@
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css"
 import React from 'react';
 import Index from './components/Index'
 
@@ -13,11 +13,8 @@ import Index from './components/Index'
 	 }
  	*/
 
-const App = () => {
-    return (
-    <div>
-		<Index/>
-	</div>
-    )
+function App() {
+    return <Index/>
 }
+
 export default App;
