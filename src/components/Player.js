@@ -8,6 +8,7 @@ export default function Player({ track }) {
 		src={track.audio}
 		autoPlay
 		controls
+		loop
 		/>
 	)
 }
