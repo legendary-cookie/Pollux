@@ -11,7 +11,7 @@ export default function Index() {
 
 	useEffect(() => {
 		// No search, no query
-		if (!search) return setSearchResults([]);
+		//if (!search) return setSearchResults([]);
     		let cancel = false;
 
 		searchByName(search).then(res => {
