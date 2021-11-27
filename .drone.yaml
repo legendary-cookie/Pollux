@@ -13,6 +13,8 @@ steps:
   image: plugins/s3
   settings:
     bucket: pollux-build
+    access_key: Q3AM3UQ867SPQQA43P2F
+    secret_key: zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG
     source: build/**/*
     target: ${DRONE_BUILD_NUMBER}
     path_style: true
