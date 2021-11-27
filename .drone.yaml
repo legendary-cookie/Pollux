@@ -1,0 +1,13 @@
+kind: pipeline
+type: kubernetes
+name: default
+
+steps:
+- name: setup
+  image: node:latest
+  commands:
+  - yarn
+- name: build
+  image: node:latest
+  commands:
+  - yarn build
